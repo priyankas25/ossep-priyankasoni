@@ -1,0 +1,422 @@
+				Assignment-1
+
+
+Q1. Explore the following commands with various options, refer man pages for 
+    further help a) date b) cal c) bc d) echo e) who f) whoami g) logname g) uname h)
+    seq i) clear
+
+ans--
+
+priyankasoni@LAPTOP-FNMGSS07:~$ date
+Tue Sep  8 16:29:46 IST 2020
+priyankasoni@LAPTOP-FNMGSS07:~$ cal
+   September 2020
+Su Mo Tu We Th Fr Sa
+       1  2  3  4  5
+ 6  7  8  9 10 11 12
+13 14 15 16 17 18 19
+20 21 22 23 24 25 26
+27 28 29 30
+
+priyankasoni@LAPTOP-FNMGSS07:~$ bc
+bc 1.07.1
+Copyright 1991-1994, 1997, 1998, 2000, 2004, 2006, 2008, 2012-2017 Free Software Foundation, Inc.
+This is free software with ABSOLUTELY NO WARRANTY.
+For details type `warranty'.
+priyankasoni@LAPTOP-FNMGSS07:~$ echo "today is tuesday.."
+today is tuesday..
+priyankasoni@LAPTOP-FNMGSS07:~$ who
+priyankasoni@LAPTOP-FNMGSS07:~$ who
+priyankasoni@LAPTOP-FNMGSS07:~$ who -m -h
+who: invalid option -- 'h'
+Try 'who --help' for more information.
+priyankasoni@LAPTOP-FNMGSS07:~$ who -m -H
+NAME     LINE         TIME             COMMENT
+priyankasoni@LAPTOP-FNMGSS07:~$ whoami
+priyankasoni
+priyankasoni@LAPTOP-FNMGSS07:~$ logname
+logname: no login name
+priyankasoni@LAPTOP-FNMGSS07:~$ uname
+Linux
+priyankasoni@LAPTOP-FNMGSS07:~$clear
+
+
+Q2.	A) Create three directory a b and c and create a.txt,b.txt and c.txt
+		in each directory respectively and then copy c directory into the a.
+	B)Move Directory b to c.
+	C)Create alias of ls -lh command to your name.
+	D)Change Directory name a to cdac.
+ans--
+
+priyankasoni@LAPTOP-FNMGSS07:~$ mkdir a
+priyankasoni@LAPTOP-FNMGSS07:~$ mkdir b
+priyankasoni@LAPTOP-FNMGSS07:~$ mkdir c
+priyankasoni@LAPTOP-FNMGSS07:~$ cd a
+priyankasoni@LAPTOP-FNMGSS07:~/a$ touch a.txt
+priyankasoni@LAPTOP-FNMGSS07:~/a$ ls
+a.txt
+priyankasoni@LAPTOP-FNMGSS07:~/a$ cd
+priyankasoni@LAPTOP-FNMGSS07:~$ cd b
+priyankasoni@LAPTOP-FNMGSS07:~/b$ b.txt
+b.txt: command not found
+priyankasoni@LAPTOP-FNMGSS07:~/b$ touch b.txt
+priyankasoni@LAPTOP-FNMGSS07:~/b$ ls
+b.txt
+priyankasoni@LAPTOP-FNMGSS07:~/b$ cd
+priyankasoni@LAPTOP-FNMGSS07:~$ cd c
+priyankasoni@LAPTOP-FNMGSS07:~/c$ touch c.txt
+priyankasoni@LAPTOP-FNMGSS07:~/c$ ls
+c.txt
+priyankasoni@LAPTOP-FNMGSS07:~/c$ cd
+priyankasoni@LAPTOP-FNMGSS07:~$ cd-
+
+Command 'cd-' not found, did you mean:
+
+  command 'cdw' from deb cdw (0.8.1-1build4)
+  command 'cdi' from deb cdo (1.9.9~rc1-1)
+  command 'cdp' from deb irpas (0.10-7)
+  command 'cdo' from deb cdo (1.9.9~rc1-1)
+  command 'cde' from deb cde (0.1+git9-g551e54d-1.1build1)
+  command 'cd5' from deb cd5 (0.1-4)
+  command 'cdb' from deb tinycdb (0.78build1)
+
+Try: sudo apt install <deb name>
+
+priyankasoni@LAPTOP-FNMGSS07:~$ cp -r b c
+priyankasoni@LAPTOP-FNMGSS07:~$ cd c
+priyankasoni@LAPTOP-FNMGSS07:~/c$ ls
+b  c.txt
+priyankasoni@LAPTOP-FNMGSS07:~/c$ df
+Filesystem     1K-blocks     Used Available Use% Mounted on
+rootfs         344709116 63627936 281081180  19% /
+none           344709116 63627936 281081180  19% /dev
+none           344709116 63627936 281081180  19% /run
+none           344709116 63627936 281081180  19% /run/lock
+none           344709116 63627936 281081180  19% /run/shm
+none           344709116 63627936 281081180  19% /run/user
+tmpfs          344709116 63627936 281081180  19% /sys/fs/cgroup
+C:\            344709116 63627936 281081180  19% /mnt/c
+D:\            315621372  3547268 312074104   2% /mnt/d
+E:\            315620348   159156 315461192   1% /mnt/e
+priyankasoni@LAPTOP-FNMGSS07:~/c$ alisa disk='df -h'
+
+Command 'alisa' not found, did you mean:
+
+  command 'elisa' from deb elisa (19.12.3-1)
+  command 'alsa' from deb alsa-base (1.0.25+dfsg-0ubuntu5)
+
+Try: sudo apt install <deb name>
+
+priyankasoni@LAPTOP-FNMGSS07:~/c$ alias disk='df -h'
+priyankasoni@LAPTOP-FNMGSS07:~/c$ disk
+Filesystem      Size  Used Avail Use% Mounted on
+rootfs          329G   61G  269G  19% /
+none            329G   61G  269G  19% /dev
+none            329G   61G  269G  19% /run
+none            329G   61G  269G  19% /run/lock
+none            329G   61G  269G  19% /run/shm
+none            329G   61G  269G  19% /run/user
+tmpfs           329G   61G  269G  19% /sys/fs/cgroup
+C:\             329G   61G  269G  19% /mnt/c
+D:\             301G  3.4G  298G   2% /mnt/d
+E:\             301G  156M  301G   1% /mnt/e
+priyankasoni@LAPTOP-FNMGSS07:~/c$ cd
+priyankasoni@LAPTOP-FNMGSS07:~$ mvdir a cdac
+
+Command 'mvdir' not found, did you mean:
+
+  command 'svdir' from deb svtools (0.6-2)
+  command 'mvdic' from deb canna-utils (3.7p3-14)
+  command 'vdir' from deb coreutils (8.30-3ubuntu2)
+  command 'mkdir' from deb coreutils (8.30-3ubuntu2)
+  command 'mmdir' from deb simh (3.8.1-6)
+  command 'mdir' from deb mtools (4.0.24-1)
+
+Try: sudo apt install <deb name>
+
+priyankasoni@LAPTOP-FNMGSS07:~$ a mvdir cdac
+a: command not found
+priyankasoni@LAPTOP-FNMGSS07:~$ mv a cdac
+priyankasoni@LAPTOP-FNMGSS07:~$ cd cdac
+priyankasoni@LAPTOP-FNMGSS07:~/cdac$ ls
+a.txt
+
+Q3. A) Create five files file1.txt , file2.txt ,file3.txt file4.txt and
+    file5.txt with some text inside it. Search for 's' character
+    inside all the files using grep command.
+    Also Use cat to view all file content together.
+	B)Create file.txt using cat and edit that using nano editor.
+	c)Create 5 empty files using touch command
+	D)Remove previously created directory a , b and c.
+
+ans--
+
+priyankasoni@LAPTOP-FNMGSS07:~/cdac$ cat > file1.txt
+sonampriyankasoni@LAPTOP-FNMGSS07:~/cdac$ cat > file2.txt
+sonupriyankasoni@LAPTOP-FNMGSS07:~/cdac$ cat > file3.txt
+sunainapriyankasoni@LAPTOP-FNMGSS07:~/cdac$ cat >file4.txt
+priyanka
+priyankasoni@LAPTOP-FNMGSS07:~/cdac$ cat >file5.txt
+pari
+priyankasoni@LAPTOP-FNMGSS07:~/cdac$ grep file1 file2 file3 file4 file5
+grep: file2: No such file or directory
+grep: file3: No such file or directory
+grep: file4: No such file or directory
+grep: file5: No such file or directory
+priyankasoni@LAPTOP-FNMGSS07:~/cdac$ grep s file1 file2 file3 file4 file5
+grep: file1: No such file or directory
+grep: file2: No such file or directory
+grep: file3: No such file or directory
+grep: file4: No such file or directory
+grep: file5: No such file or directory
+priyankasoni@LAPTOP-FNMGSS07:~/cdac$ grep s file1.txt
+sonam
+priyankasoni@LAPTOP-FNMGSS07:~/cdac$ grep s file1.txt file2.txt file3.txt file4.txt file5.txt
+file1.txt:sonam
+file2.txt:sonu
+file3.txt:sunaina
+priyankasoni@LAPTOP-FNMGSS07:~/cdac$ cd
+priyankasoni@LAPTOP-FNMGSS07:~$ cd c
+priyankasoni@LAPTOP-FNMGSS07:~/c$ apt install nano
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+priyankasoni@LAPTOP-FNMGSS07:~/c$ y
+y: command not found
+priyankasoni@LAPTOP-FNMGSS07:~/c$ nano nanofile.txt
+priyankasoni@LAPTOP-FNMGSS07:~/c$ cd
+priyankasoni@LAPTOP-FNMGSS07:~$ rm -r c
+priyankasoni@LAPTOP-FNMGSS07:~$ rm -r b
+priyankasoni@LAPTOP-FNMGSS07:~$ ls
+cdac  ossep
+
+
+Q4. Create a file with some content using vi editor
+	a) Display the file using cat command
+	b) Display line numbers along with content
+	c) Display the file in reverse order using tac
+	d) Combine multiple files using cat command
+
+ans--
+
+  1  sonampriyankasoni@LAPTOP-FNMGSS07:~/cdac$ vi pri.txrt
+priyankasoni@LAPTOP-FNMGSS07:~/cdac$ cat pri.txrt
+file created using vi editor..;;
+
+priyankasoni@LAPTOP-FNMGSS07:~/cdac$ cat -n pri.txrt
+     1  file created using vi editor..;;
+     2
+priyankasoni@LAPTOP-FNMGSS07:~/cdac$ tac pri.txrt
+
+file created using vi editor..;;
+priyankasoni@LAPTOP-FNMGSS07:~/cdac$ tac file1.txt file2.txt file3.txt file4.txt
+sonamsonusunainapriyanka
+priyankasoni@LAPTOP-FNMGSS07:~/cdac$ cat file1 file2 file3 file4 > file
+cat: file1: No such file or directory
+cat: file2: No such file or directory
+cat: file3: No such file or directory
+cat: file4: No such file or directory
+priyankasoni@LAPTOP-FNMGSS07:~/cdac$ cat file1.txt file2.txt file3.txt file4.txt > file.txt
+priyankasoni@LAPTOP-FNMGSS07:~/cdac$ cat file.txt
+sonamsonusunainapriyanka
+
+
+
+
+Q5. Create Random some files and sub directories.
+	a) display files row wise, column wise, 1 per row
+	b) sort the files in ascending, descending order
+	c) Create some hidden files and sub directories and display them using “ls -a”
+	d) Change time stamp of some files and directories using touch command and display the files using ls -t ls -rt
+	e) Recursive display contents of your home directory.
+	f) display all attributes of files and directories using ls -l
+	g) display attributes of a directory using ls -ld
+
+
+ans--
+
+
+priyankasoni@LAPTOP-FNMGSS07:~$ mkdir random
+priyankasoni@LAPTOP-FNMGSS07:~$ cd
+priyankasoni@LAPTOP-FNMGSS07:~$ cd random
+priyankasoni@LAPTOP-FNMGSS07:~/random$ mkdir first
+priyankasoni@LAPTOP-FNMGSS07:~/random$ cd first
+priyankasoni@LAPTOP-FNMGSS07:~/random/first$ mkdir first11
+priyankasoni@LAPTOP-FNMGSS07:~/random/first$ cd
+priyankasoni@LAPTOP-FNMGSS07:~$ cd random
+priyankasoni@LAPTOP-FNMGSS07:~/random$ mkdir second
+priyankasoni@LAPTOP-FNMGSS07:~/random$ mardir 3rd
+mardir: command not found
+priyankasoni@LAPTOP-FNMGSS07:~/random$ mkdir 3rd
+priyankasoni@LAPTOP-FNMGSS07:~/random$ ls
+3rd  first  second
+priyankasoni@LAPTOP-FNMGSS07:~/random$ cat > file.txt
+hello i am priyanka
+priyankasoni@LAPTOP-FNMGSS07:~/random$ column -t file.txt
+hello  i  am  priyanka
+priyankasoni@LAPTOP-FNMGSS07:~/random$ row file.txt
+
+Command 'row' not found, did you mean:
+
+  command 'cow' from deb fl-cow (0.6-4.2)
+  command 'ro' from deb golang-redoctober (0.0~git20161017.0.78e9720-4)
+  command 'raw' from deb util-linux (2.34-0.1ubuntu9)
+  command 'rox' from deb rox-filer (1:2.11-1)
+  command 'sow' from deb ruby-hoe (3.21.0+dfsg1-1)
+
+Try: sudo apt install <deb name>
+
+priyankasoni@LAPTOP-FNMGSS07:~/random$ sort
+
+
+priyankasoni@LAPTOP-FNMGSS07:~/random$ cd
+priyankasoni@LAPTOP-FNMGSS07:~$ sort random
+sort: read failed: random: Is a directory
+priyankasoni@LAPTOP-FNMGSS07:~$ cd random
+priyankasoni@LAPTOP-FNMGSS07:~/random$ sort file.txt
+hello i am priyanka
+priyankasoni@LAPTOP-FNMGSS07:~/random$ cat > fruits
+apple
+banana
+pineapple
+grapes
+priyankasoni@LAPTOP-FNMGSS07:~/random$ sort fruits
+apple
+banana
+grapes
+pineapple
+priyankasoni@LAPTOP-FNMGSS07:~/random$ sort -r fruits
+pineapple
+grapes
+banana
+apple
+priyankasoni@LAPTOP-FNMGSS07:~/random$ mkdir .hidden
+priyankasoni@LAPTOP-FNMGSS07:~/random$ ls
+3rd  file.txt  first  fruits  second
+priyankasoni@LAPTOP-FNMGSS07:~/random$ ls -a
+.  ..  .hidden  3rd  file.txt  first  fruits  second
+priyankasoni@LAPTOP-FNMGSS07:~/random$ touch .hide.txt
+priyankasoni@LAPTOP-FNMGSS07:~/random$ ls
+3rd  file.txt  first  fruits  second
+priyankasoni@LAPTOP-FNMGSS07:~/random$ ls -a
+.  ..  .hidden  .hide.txt  3rd  file.txt  first  fruits  second
+priyankasoni@LAPTOP-FNMGSS07:~/random$ stat file.txt
+  File: file.txt
+  Size: 21              Blocks: 0          IO Block: 4096   regular file
+Device: 2h/2d   Inode: 16888498602704705  Links: 1
+Access: (0644/-rw-r--r--)  Uid: ( 1000/priyankasoni)   Gid: ( 1000/priyankasoni)
+Access: 2020-09-08 18:29:28.603221800 +0530
+Modify: 2020-09-08 18:22:11.871545700 +0530
+Change: 2020-09-08 18:22:11.871545700 +0530
+ Birth: -
+priyankasoni@LAPTOP-FNMGSS07:~/random$ touch -a file.txt
+priyankasoni@LAPTOP-FNMGSS07:~/random$ stat file.txt
+  File: file.txt
+  Size: 21              Blocks: 0          IO Block: 4096   regular file
+Device: 2h/2d   Inode: 16888498602704705  Links: 1
+Access: (0644/-rw-r--r--)  Uid: ( 1000/priyankasoni)   Gid: ( 1000/priyankasoni)
+Access: 2020-09-08 18:37:50.362832000 +0530
+Modify: 2020-09-08 18:22:11.871545700 +0530
+Change: 2020-09-08 18:37:50.362832000 +0530
+ Birth: -
+priyankasoni@LAPTOP-FNMGSS07:~/random$ touch -m file.txt
+priyankasoni@LAPTOP-FNMGSS07:~/random$ stat file.txt
+  File: file.txt
+  Size: 21              Blocks: 0          IO Block: 4096   regular file
+Device: 2h/2d   Inode: 16888498602704705  Links: 1
+Access: (0644/-rw-r--r--)  Uid: ( 1000/priyankasoni)   Gid: ( 1000/priyankasoni)
+Access: 2020-09-08 18:37:50.362832000 +0530
+Modify: 2020-09-08 18:39:23.141406100 +0530
+Change: 2020-09-08 18:39:23.141406100 +0530
+ Birth: -
+priyankasoni@LAPTOP-FNMGSS07:~/random$ ls -t
+file.txt  fruits  3rd  second  first
+priyankasoni@LAPTOP-FNMGSS07:~/random$ ls -rt
+first  second  3rd  fruits  file.txt
+priyankasoni@LAPTOP-FNMGSS07:~/random$ cd
+priyankasoni@LAPTOP-FNMGSS07:~$ ls
+cdac  ossep  random
+priyankasoni@LAPTOP-FNMGSS07:~$ ls -r
+random  ossep  cdac
+
+
+Q1. Create directory of your name and then create 4 files inside it named
+	a.txt, b.txt, c.txt and d.sh. And change the directory permission to
+	only user and also files permission to only user such that
+		a)user can read and write the file a.txt and b.txt
+		b)user can write the file c.txt
+		c)user can exectuable the file d.sh. Make
+			Contents of file d.sh:
+			#/bin/sh
+			ls -lh
+
+ans--
+
+priyankasoni@LAPTOP-FNMGSS07:~/random$ cd priyanka
+priyankasoni@LAPTOP-FNMGSS07:~/random/priyanka$ cat > a.txt
+hello
+priyankasoni@LAPTOP-FNMGSS07:~/random/priyanka$ cat > b.txt
+i am
+priyankasoni@LAPTOP-FNMGSS07:~/random/priyanka$ cat >c.txt
+inside
+priyankasoni@LAPTOP-FNMGSS07:~/random/priyanka$ cat > d.sh
+d file
+priyankasoni@LAPTOP-FNMGSS07:~/random/priyanka$ chmod go=r
+chmod: missing operand after ‘go=r’
+Try 'chmod --help' for more information.
+priyankasoni@LAPTOP-FNMGSS07:~/random/priyanka$ chmod go=r
+chmod: missing operand after ‘go=r’
+Try 'chmod --help' for more information.
+priyankasoni@LAPTOP-FNMGSS07:~/random/priyanka$ cd
+priyankasoni@LAPTOP-FNMGSS07:~$ cd random
+priyankasoni@LAPTOP-FNMGSS07:~/random$ chmod go=r priyanka
+priyankasoni@LAPTOP-FNMGSS07:~/random$ cd priyanka
+priyankasoni@LAPTOP-FNMGSS07:~/random/priyanka$ chmod a+w+r a.txt b.txt
+priyankasoni@LAPTOP-FNMGSS07:~/random/priyanka$ chmod a+w c.txt
+priyankasoni@LAPTOP-FNMGSS07:~/random/priyanka$ chmod a+x d.sh
+priyankasoni@LAPTOP-FNMGSS07:~/random/priyanka$ cat d.sh
+d file
+priyankasoni@LAPTOP-FNMGSS07:~/random/priyanka$ cat c.txt
+inside
+
+
+Q2. Change the permission of the previous directory to executable only.
+	Analyze the output.
+
+
+ans--
+priyankasoni@LAPTOP-FNMGSS07:~/random$ chmod go=x priyanka
+
+
+Q3. Change the permission of the previous directory to read only.
+	Analyze the output.
+
+ans--
+priyankasoni@LAPTOP-FNMGSS07:~/random/priyanka$ chmod go-wx a.txt
+
+Q4. Use echo to list the all files of your home directory.
+
+ans--
+
+priyankasoni@LAPTOP-FNMGSS07:~$ echo *
+cdac ossep random
+
+
+Q5. Use echo to list the all files of /etc/ directory
+ans--
+
+ls /etc
+
+Q6. Use echo to append your name to a.txt
+
+ans-
+
+priyankasoni@LAPTOP-FNMGSS07:~/random/priyanka$ echo "priyanka" >a.txt
+priyankasoni@LAPTOP-FNMGSS07:~/random/priyanka$ cat a.txt
+priyanka
+
+
+
+
+
+
+

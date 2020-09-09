@@ -1,0 +1,79 @@
+				ASSIGNMENT-2
+
+1. Write a script to create 10 directories, say a1,a2,...,a10
+Report error if a directory/file exists with the same name.
+
+ans--
+
+ makeit () {
+ if [[ -e $a{1..10} ]]; then
+ mkdir $a{1..10}
+ else
+ echo "directory exists"
+ fi
+ }
+
+2. Write a menu based script to perform following string operations
+a) To find length of a string
+c) Copying string
+d) Concatenation of strings
+e) Compare two strings
+f) Reversing a string
+
+ans--
+
+funstr () {
+ echo "enter a string.."
+ read str
+ echo -e "choose an option..1)to find length of string \n2) copying string \n3)concat of string \n4)compare 2 string \n5)
+ reverse string"
+ read num
+ case $num in
+ 1) echo "${#str}";;
+ 2) ab=$str; echo "original value=$str, copied value=$ab";;
+ 3) echo "enter string"; read a; c="$str $a"; echo $c;;
+ 4) echo "enter string"; read str3; if [[ "$str" == "$str3" ]]; then echo "match"; else echo "do not match"; fi ;;
+ 5) echo $str | rev;;
+ *) echo "invalid number";;
+esac
+}
+
+3.Write a shell script to rename all files in the current directory with numeric continuous value(Warning: Do this in a personal folder. Don't use Home directory) 
+ans--
+
+funrename () {
+rename -v a b *a
+}
+
+4. Write a script that print environment variable(Print $HOME,$PATH,$SHELL,$HISTORY,$LOGNAME,$TERM)
+
+ans--
+
+funenv () {
+ echo $HOME $PATH $SHELL $HISTORY $LOGNAME $TERM; echo "printed" 
+}
+
+5. Write a shell script to print all files permissions in current directory(Not name or other details)(Use cut commands)
+ans--
+
+perfun () {
+find //home/priyankasoni/$a -printf "%m\n"
+}
+
+6. Write a shell script to print all files permissions and name of file
+ans--
+
+nameper () {
+ a=$1
+ find //home/priyankasoni/$a -printf "%f:%m\n"
+ echo "printed"
+ }
+
+7.Write a shell script to print all files name and size greater than 5K
+
+ans--
+
+funsize () {
+find . -type f -size -5000c
+echo "printed"
+}	
